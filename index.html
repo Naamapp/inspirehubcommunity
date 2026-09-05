@@ -1107,9 +1107,40 @@
     </div>
 
     <p class="gallery-hint" style="text-align:center; margin-top:2rem;">
-        To use your own photos, host them (e.g. on GitHub/Vercel) and update the image links in this gallery.
+       
     </p>
 </section>
+
+    <section class="video-section" id="video">
+    <div class="section-container">
+        <span class="section-label reveal">Watch</span>
+        <h2 class="section-title reveal">Our Story in <em>Motion</em></h2>
+        <p class="section-desc reveal" style="margin: 0 auto 3rem;">
+            Get a glimpse of the impact we are making together — the stories, the people, and the moments that define Inspire Hub.
+        </p>
+
+        <div class="video-container reveal">
+            <!-- Thumbnail image -->
+            <img src="https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                 alt="Video thumbnail"
+                 class="video-thumbnail"
+                 id="videoThumbnail">
+
+            <!-- Play button -->
+            <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+
+            <!-- YouTube iframe -->
+            <iframe class="video-iframe"
+                    id="videoIframe"
+                    src=""
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
 
     <!-- CTA -->
     <section class="cta-section" id="contact">
