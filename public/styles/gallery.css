@@ -1,3 +1,7 @@
+/* ------------------------------
+   GALLERY SECTION
+------------------------------ */
+
 .gallery {
     background: var(--cream);
     padding: 5rem 2rem;
@@ -15,14 +19,17 @@
     overflow: hidden;
 }
 
+/* Track: smooth infinite scroll */
 .gallery-carousel-track {
     display: flex;
     gap: 1.5rem;
-    animation: galleryScroll 7s linear infinite;
+    animation: galleryScroll 12s linear infinite; /* fast but smooth */
+    will-change: transform;
 }
 
+/* Tile width — FIXED for mobile jump */
 .gallery-item {
-    flex: 0 0 340px; /* mobile width fix */
+    flex: 0 0 340px; /* mobile width */
     border-radius: 18px;
     overflow: hidden;
     background: #000;
@@ -30,38 +37,42 @@
 
 @media (min-width: 640px) {
     .gallery-item {
-        flex: 0 0 380px;
+        flex: 0 0 380px; /* tablets */
     }
 }
 
 @media (min-width: 1024px) {
     .gallery-item {
-        flex: 0 0 450px;
+        flex: 0 0 450px; /* desktop */
     }
 }
 
+/* Image styling */
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1; /* Instagram square */
     display: block;
 }
 
-/* Smooth continuous scroll */
+/* Infinite scroll — FULL track scroll (fixes mobile jump) */
 @keyframes galleryScroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* must be -100% */
     }
 }
 
-/* Pause on hover */
-.gallery-carousel-wrapper:hover .gallery-carousel-track {
-    animation-play-state: paused;
+/* Pause on hover (desktop only) */
+@media (hover: hover) {
+    .gallery-carousel-wrapper:hover .gallery-carousel-track {
+        animation-play-state: paused;
+    }
 }
+
 
 
 /* ------------------------------
