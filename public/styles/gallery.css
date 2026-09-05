@@ -18,7 +18,7 @@
 .gallery-carousel-track {
     display: flex;
     gap: 1.5rem;
-    animation: galleryScroll 40s linear infinite;
+    animation: galleryScroll 5s linear infinite;
 }
 
 .gallery-item {
