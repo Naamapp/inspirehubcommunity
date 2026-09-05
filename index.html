@@ -1244,30 +1244,31 @@
         });
     });
 
-    /* ---------------------------------------------
-       STEP 4 — Seamless Infinite Scroll for Gallery
-       --------------------------------------------- */
+  /* ---------------------------------------------
+   STEP 4 — Seamless Infinite Scroll for Gallery
+--------------------------------------------- */
 
+const galleryTrack = document.getElementById('galleryTrack');
 
-    const galleryTrack = document.getElementById('galleryTrack');
+if (galleryTrack) {
+    const images = galleryTrack.querySelectorAll('img');
 
-    if (galleryTrack) {
-        const images = galleryTrack.querySelectorAll('img');
+    // Wait until ALL images are fully loaded
+    Promise.all(
+        Array.from(images).map(img => {
+            if (img.complete) return Promise.resolve();
+            return new Promise(resolve => img.onload = resolve);
+        })
+    ).then(() => {
+        // Now safely duplicate items
+        const items = Array.from(galleryTrack.children);
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            galleryTrack.appendChild(clone);
+        });
+    });
+}
 
-        // Wait until ALL images are fully loaded
-        Promise.all(
-            Array.from(images).map(img => {
-                if (img.complete) return Promise.resolve();
-                return new Promise(resolve => img.onload = resolve);
-            })
-        ).then(() => {
-            // Now safely duplicate items
-            const items = Array.from(galleryTrack.children);
-            items.forEach(item => {
-                const clone = item.cloneNode(true);
-                galleryTrack.appendChild(clone);
-            });
-    }
 
     /* ---------------------------------------------
        STEP 3 — Video Play Button Logic
