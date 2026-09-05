@@ -23,7 +23,7 @@
 .gallery-carousel-track {
     display: flex;
     gap: 1.5rem;
-    animation: galleryScroll 12s linear infinite; /* fast but smooth */
+    animation: galleryScroll 40s linear infinite; /* fast but smooth */
     will-change: transform;
 }
 
