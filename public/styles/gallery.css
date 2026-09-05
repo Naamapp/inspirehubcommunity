@@ -138,7 +138,17 @@
     color: white !important;
 }
 
-/* Optional: keep the gold accent on <em> */
-.video-section .section-title em {
-    color: var(--gold);
+/* ---------------------------------------------
+   MAKE “Watch” AND “Motion” EMERALD
+--------------------------------------------- */
+
+/* “Watch” label */
+.video-section .section-label {
+    color: var(--emerald) !important;
 }
+
+/* “Motion” inside the title */
+.video-section .section-title em {
+    color: var(--emerald) !important;
+}
+
