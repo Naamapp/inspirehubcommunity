@@ -1251,7 +1251,28 @@
             galleryTrack.appendChild(clone);
         });
     }
+
+    /* ---------------------------------------------
+       STEP 3 — Video Play Button Logic
+       --------------------------------------------- */
+
+    const videoPlayBtn = document.getElementById('videoPlayBtn');
+    const videoThumbnail = document.getElementById('videoThumbnail');
+    const videoIframe = document.getElementById('videoIframe');
+
+    if (videoPlayBtn) {
+        videoPlayBtn.addEventListener('click', () => {
+            // Hide thumbnail + play button
+            videoThumbnail.style.display = 'none';
+            videoPlayBtn.style.display = 'none';
+
+            // Load your YouTube video (replace VIDEO_ID later)
+            videoIframe.src = "https://www.youtube.com/embed/VIDEO_ID?autoplay=1";
+            videoIframe.style.display = 'block';
+        });
+    }
 </script>
 </body>
 </html>
+
 
