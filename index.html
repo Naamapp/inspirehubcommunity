@@ -1091,18 +1091,21 @@
         <p class="gallery-hint" style="text-align:center; margin-top:2rem;">To use your own photos, add images to the <strong>public/</strong> folder and update the image links in the gallery section.</p>
     </section>
 
-            /* Video Section */
-        .video-section { background: var(--navy); padding: 7rem 2rem; text-align: center; }
-        .video-section .section-title { color: white; }
-        .video-section .section-label { color: var(--emerald-light); }
-        .video-section .section-desc { color: rgba(255,255,255,0.7); margin: 0 auto 3rem; }
-        .video-container { max-width: 960px; margin: 0 auto; position: relative; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
-        .video-thumbnail { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .video-play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; border-radius: 50%; background: var(--emerald); border: 4px solid rgba(255,255,255,0.2); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; box-shadow: 0 0 0 0 rgba(5,150,105,0.5); animation: playPulse 2.5s ease-in-out infinite; z-index: 5; }
-        @keyframes playPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(5,150,105,0.5); } 50% { box-shadow: 0 0 0 20px rgba(5,150,105,0); } }
-        .video-play-btn:hover { background: var(--emerald-dark); transform: translate(-50%, -50%) scale(1.1); }
-        .video-play-btn svg { width: 32px; height: 32px; fill: white; margin-left: 4px; }
-        .video-iframe { display: none; width: 100%; height: 100%; border: none; }
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="section-container">
+            <span class="section-label reveal">Watch</span>
+            <h2 class="section-title reveal">Our Story in <em>Motion</em></h2>
+            <p class="section-desc reveal" style="margin: 0 auto 3rem;">Get a glimpse of the impact we are making together &mdash; the stories, the people, and the moments that define Inspire Hub.</p>
+            <div class="video-container reveal">
+                <img src="https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Video thumbnail" class="video-thumbnail" id="videoThumbnail">
+                <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <iframe class="video-iframe" id="videoIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Team -->
