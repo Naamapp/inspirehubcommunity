@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --navy: #0a1628;
@@ -24,16 +25,8 @@
             --border: rgba(255,255,255,0.08);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', sans-serif;
             color: var(--text-dark);
@@ -57,14 +50,12 @@
             padding: 1.2rem 0;
             transition: all 0.4s ease;
         }
-
         nav.scrolled {
             background: rgba(10, 22, 40, 0.95);
             backdrop-filter: blur(20px);
             padding: 0.8rem 0;
             box-shadow: 0 4px 30px rgba(0,0,0,0.15);
         }
-
         .nav-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -73,20 +64,17 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .nav-logo {
             display: flex;
             align-items: center;
             gap: 0.75rem;
             text-decoration: none;
         }
-
         .nav-logo img {
             height: 44px;
             width: auto;
             border-radius: 8px;
         }
-
         .nav-logo span {
             font-family: 'Playfair Display', serif;
             font-size: 1.3rem;
@@ -94,13 +82,11 @@
             color: white;
             letter-spacing: -0.02em;
         }
-
         .nav-links {
             display: flex;
             gap: 2.5rem;
             list-style: none;
         }
-
         .nav-links a {
             color: rgba(255,255,255,0.85);
             text-decoration: none;
@@ -110,7 +96,6 @@
             transition: color 0.3s ease;
             position: relative;
         }
-
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -121,14 +106,8 @@
             background: var(--emerald-light);
             transition: width 0.3s ease;
         }
-
-        .nav-links a:hover {
-            color: white;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+        .nav-links a:hover { color: white; }
+        .nav-links a:hover::after { width: 100%; }
 
         .mobile-menu-btn {
             display: none;
@@ -150,7 +129,6 @@
             overflow: hidden;
             padding: 8rem 2rem 4rem;
         }
-
         .hero::before {
             content: '';
             position: absolute;
@@ -162,7 +140,6 @@
             border-radius: 50%;
             animation: pulse 8s ease-in-out infinite;
         }
-
         .hero::after {
             content: '';
             position: absolute;
@@ -186,7 +163,6 @@
             position: relative;
             z-index: 2;
         }
-
         .hero-logo {
             width: 140px;
             height: auto;
@@ -195,7 +171,6 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             animation: fadeInUp 1s ease-out;
         }
-
         .hero h1 {
             font-size: clamp(2.8rem, 6vw, 4.5rem);
             color: white;
@@ -203,12 +178,10 @@
             letter-spacing: -0.03em;
             animation: fadeInUp 1s ease-out 0.2s both;
         }
-
         .hero h1 em {
             color: var(--emerald-light);
             font-style: italic;
         }
-
         .hero-subtitle {
             font-size: clamp(1.1rem, 2vw, 1.35rem);
             color: rgba(255,255,255,0.7);
@@ -217,7 +190,6 @@
             font-weight: 300;
             animation: fadeInUp 1s ease-out 0.4s both;
         }
-
         .hero-cta {
             display: flex;
             gap: 1rem;
@@ -225,7 +197,6 @@
             flex-wrap: wrap;
             animation: fadeInUp 1s ease-out 0.6s both;
         }
-
         .btn {
             display: inline-flex;
             align-items: center;
@@ -240,25 +211,21 @@
             border: none;
             letter-spacing: 0.01em;
         }
-
         .btn-primary {
             background: var(--emerald);
             color: white;
             box-shadow: 0 8px 30px rgba(5,150,105,0.35);
         }
-
         .btn-primary:hover {
             background: var(--emerald-dark);
             transform: translateY(-2px);
             box-shadow: 0 12px 40px rgba(5,150,105,0.45);
         }
-
         .btn-outline {
             background: transparent;
             color: white;
             border: 1.5px solid rgba(255,255,255,0.3);
         }
-
         .btn-outline:hover {
             background: rgba(255,255,255,0.08);
             border-color: rgba(255,255,255,0.5);
@@ -266,994 +233,424 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Section Styles */
-        section {
-            padding: 6rem 2rem;
-            position: relative;
-        }
-
-        .section-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-label {
-            display: inline-block;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--emerald);
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--navy);
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .section-title em {
-            color: var(--emerald);
-            font-style: italic;
-        }
-
-        .section-desc {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            line-height: 1.8;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--cream);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-            margin-top: 3rem;
-        }
-
-        .about-text p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.9;
-        }
-
-        .about-text p.lead {
-            font-size: 1.2rem;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        .about-visual {
-            position: relative;
-        }
-
-        .about-visual .card {
-            background: var(--navy);
-            border-radius: 20px;
-            padding: 3rem;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-visual .card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(5,150,105,0.2) 0%, transparent 70%);
-        }
-
-        .about-visual .card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            position: relative;
-        }
-
-        .about-visual .card p {
-            color: rgba(255,255,255,0.75);
-            font-size: 1rem;
-            line-height: 1.8;
-            position: relative;
-        }
-
-        .stat-row {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-            position: relative;
-        }
-
-        .stat-item h4 {
-            font-family: 'Inter', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--emerald-light);
-            margin-bottom: 0.25rem;
-        }
-
-        .stat-item span {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.6);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        /* Programme Section */
-        .programme {
-            background: var(--navy);
-            color: white;
-            padding: 7rem 2rem;
-        }
-
-        .programme .section-title {
-            color: white;
-        }
-
-        .programme .section-desc {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .programme-intro {
-            max-width: 800px;
-            margin-bottom: 4rem;
-        }
-
-        .programme-intro p {
-            color: rgba(255,255,255,0.75);
-            font-size: 1.1rem;
-            line-height: 1.9;
-            margin-bottom: 1.5rem;
-        }
-
-        .programme-intro p strong {
-            color: white;
-            font-weight: 600;
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 3rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--emerald), var(--gold));
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-bottom: 3.5rem;
-            opacity: 0;
-            transform: translateX(-20px);
-            transition: all 0.6s ease;
-        }
-
-        .timeline-item.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .timeline-item:last-child {
-            padding-bottom: 0;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: -3rem;
-            top: 0.5rem;
-            width: 14px;
-            height: 14px;
-            background: var(--emerald);
-            border-radius: 50%;
-            border: 3px solid var(--navy);
-            transform: translateX(-6px);
-            box-shadow: 0 0 0 4px rgba(5,150,105,0.2);
-        }
-
-        .timeline-content {
-            background: var(--navy-light);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .timeline-content:hover {
-            border-color: rgba(5,150,105,0.3);
-            transform: translateX(8px);
-        }
-
-        .timeline-date {
-            display: inline-block;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--emerald-light);
-            margin-bottom: 0.75rem;
-            padding: 0.35rem 1rem;
-            background: rgba(5,150,105,0.12);
-            border-radius: 50px;
-        }
-
-        .timeline-content h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: white;
-        }
-
-        .timeline-content p {
-            color: rgba(255,255,255,0.7);
-            font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 1.25rem;
-        }
-
-        .workshop-list {
-            list-style: none;
-            margin: 1.25rem 0;
-        }
-
-        .workshop-list li {
-            padding: 0.6rem 0;
-            padding-left: 1.75rem;
-            position: relative;
-            color: rgba(255,255,255,0.8);
-            font-size: 0.95rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .workshop-list li:last-child {
-            border-bottom: none;
-        }
-
-        .workshop-list li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--emerald-light);
-            font-weight: 700;
-        }
-
-        .timeline-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-            color: var(--emerald-light);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: gap 0.3s ease;
-        }
-
-        .timeline-cta:hover {
-            gap: 0.8rem;
-            color: var(--emerald);
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.3rem 0.9rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-left: 0.75rem;
-            vertical-align: middle;
-        }
-
-        .badge-gold {
-            background: rgba(200,149,108,0.15);
-            color: var(--gold);
-            border: 1px solid rgba(200,149,108,0.3);
-        }
-
-        .badge-emerald {
-            background: rgba(5,150,105,0.15);
-            color: var(--emerald-light);
-            border: 1px solid rgba(5,150,105,0.3);
-        }
-
-        /* Team Section */
-        .team {
-            background: var(--cream-dark);
-            padding: 7rem 2rem;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-            margin-top: 3.5rem;
-        }
-
-        .team-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            transition: all 0.4s ease;
-            border: 1px solid rgba(0,0,0,0.04);
-        }
-
-        .team-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-        }
-
-        .team-card-img {
-            height: 280px;
-            background: linear-gradient(135deg, var(--navy-accent) 0%, var(--navy-light) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .team-card-img::before {
-            content: '';
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, rgba(5,150,105,0.2) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .team-card-img .initials {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: 600;
-            color: rgba(255,255,255,0.9);
-            position: relative;
-            z-index: 2;
-        }
-
-        .team-card-body {
-            padding: 1.75rem;
-        }
-
-        .team-card-body h4 {
-            font-size: 1.25rem;
-            color: var(--navy);
-            margin-bottom: 0.35rem;
-        }
-
-        .team-card-body .role {
-            color: var(--emerald);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 0.75rem;
-        }
-
-        .team-card-body p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.7;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: var(--navy);
-            text-align: center;
-            padding: 6rem 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 300px;
-            background: radial-gradient(ellipse, rgba(5,150,105,0.1) 0%, transparent 70%);
-        }
-
-        .cta-section h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: white;
-            margin-bottom: 1.25rem;
-            position: relative;
-        }
-
-        .cta-section p {
-            color: rgba(255,255,255,0.7);
-            font-size: 1.15rem;
-            max-width: 550px;
-            margin: 0 auto 2rem;
-            position: relative;
-        }
-
-        /* Footer */
-        footer {
-            background: #070f1c;
-            padding: 4rem 2rem 2rem;
-            color: rgba(255,255,255,0.6);
-        }
-
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-brand img {
-            height: 50px;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-
-        .footer-brand p {
-            font-size: 0.95rem;
-            line-height: 1.8;
-            max-width: 300px;
-        }
-
-        .footer-col h5 {
-            color: white;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1.25rem;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-col ul li a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-col ul li a:hover {
-            color: var(--emerald-light);
-        }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.06);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .footer-social a {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .footer-social a:hover {
-            background: var(--emerald);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Scroll Reveal */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .hero {
-                padding: 7rem 1.5rem 3rem;
-            }
-
-            section {
-                padding: 4rem 1.5rem;
-            }
-
-            .timeline {
-                padding-left: 2rem;
-            }
-
-            .timeline-dot {
-                left: -2rem;
-                width: 12px;
-                height: 12px;
-                transform: translateX(-5px);
-            }
-
-            .timeline-content {
-                padding: 1.75rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-
-        /* Mobile Menu */
-        .mobile-nav {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--navy);
-            z-index: 999;
-            padding: 6rem 2rem 2rem;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .mobile-nav.active {
-            display: flex;
-        }
-
-        .mobile-nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-family: 'Playfair Display', serif;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .mobile-nav-close {
-            position: absolute;
-            top: 1.5rem;
-            right: 2rem;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
+
 <base target="_blank">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <img src="data:image/jpeg;base64,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" alt="Inspire Hub">
-                <span>Inspire Hub</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#programme">Programme</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-        </div>
-    </nav>
 
-    <div class="mobile-nav" id="mobileNav">
-        <button class="mobile-nav-close" onclick="toggleMenu()">✕</button>
-        <a href="#about" onclick="toggleMenu()">About</a>
-        <a href="#programme" onclick="toggleMenu()">Programme</a>
-        <a href="#team" onclick="toggleMenu()">Team</a>
-        <a href="#contact" onclick="toggleMenu()">Contact</a>
+<!-- Navigation -->
+<nav id="navbar">
+    <div class="nav-container">
+        <a href="#" class="nav-logo">
+            <img src="logo.png" alt="Inspire Hub Logo">
+            <span>Inspire Hub</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#programme">Programme</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
     </div>
+</nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-content">
-            <img src="data:image/jpeg;base64,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" alt="Inspire Hub Logo" class="hero-logo">
-            <h1>Where Community <em>Comes Alive</em></h1>
-            <p class="hero-subtitle">Reimagining spaces, empowering voices, and building something meaningful, inclusive, and lasting — together.</p>
-            <div class="hero-cta">
-                <a href="#programme" class="btn btn-primary">Explore Programmes →</a>
-                <a href="#about" class="btn btn-outline">Our Story</a>
-            </div>
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="toggleMenu()">×</button>
+    <a href="#about">About</a>
+    <a href="#programme">Programme</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#video">Video</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+        <img src="logo.png" class="hero-logo" alt="Inspire Hub Logo">
+        <h1>Empowering <em>Young Voices</em></h1>
+        <p class="hero-subtitle">A creative community space supporting 16–25 year-olds through storytelling, art, and expression.</p>
+        <div class="hero-cta">
+            <a href="#programme" class="btn btn-primary">Explore Programme</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- About -->
-    <section class="about" id="about">
-        <div class="section-container">
-            <span class="section-label reveal">About Us</span>
-            <h2 class="section-title reveal">Rooted in Community.<br><em>Reimagined for Tomorrow.</em></h2>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <p class="lead">Inspire Hub is a reimagining of what was once a vibrant, volunteer-led community space. For years, local residents kept it alive through pure dedication and collective effort — running programmes, building relationships, and creating a sense of belonging.</p>
-                    <p>But like many grassroots projects, sustaining everything on volunteer energy alone became challenging over time. Today, Inspire Hub is entering a new chapter. With a small team of trained staff, we are rebuilding the organisation from the ground up — from the logo to the policies — while staying rooted in the same values that shaped it from the start.</p>
-                    <p>What makes this journey possible is the foundation laid by over a decade of community trust, collaboration, and care. We are proud to be drawing on those long-standing relationships — not just preserving them, but actively building on them. Together with our community partners, we are creating new opportunities, supporting local needs, and working toward something meaningful, inclusive, and lasting.</p>
-                </div>
-                <div class="about-visual reveal">
-                    <div class="card">
-                        <h3>Our Impact</h3>
-                        <p>Over a decade of community trust, collaboration, and care — now reimagined with trained staff and renewed purpose.</p>
-                        <div class="stat-row">
-                            <div class="stat-item">
-                                <h4>10+</h4>
-                                <span>Years of Trust</span>
-                            </div>
-                            <div class="stat-item">
-                                <h4>4</h4>
-                                <span>Themes This Year</span>
-                            </div>
-                            <div class="stat-item">
-                                <h4>16–25</h4>
-                                <span>Youth Focus</span>
-                            </div>
+<section class="about" id="about">
+    <div class="section-container">
+        <span class="section-label reveal">About Us</span>
+        <h2 class="section-title reveal">Rooted in Community.<br><em>Reimagined for Tomorrow.</em></h2>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <p class="lead">Inspire Hub is a reimagining of what was once a vibrant, volunteer-led community space. For years, local residents kept it alive through pure dedication and collective effort — running programmes, building relationships, and creating a sense of belonging.</p>
+                <p>But like many grassroots projects, sustaining everything on volunteer energy alone became challenging over time. Today, Inspire Hub is entering a new chapter. With a small team of trained staff, we are rebuilding the organisation from the ground up — from the logo to the policies — while staying rooted in the same values that shaped it from the start.</p>
+                <p>What makes this journey possible is the foundation laid by over a decade of community trust, collaboration, and care. We are proud to be drawing on those long-standing relationships — not just preserving them, but actively building on them. Together with our community partners, we are creating new opportunities, supporting local needs, and working toward something meaningful, inclusive, and lasting.</p>
+            </div>
+            <div class="about-visual reveal">
+                <div class="card">
+                    <h3>Our Impact</h3>
+                    <p>Over a decade of community trust, collaboration, and care — now reimagined with trained staff and renewed purpose.</p>
+                    <div class="stat-row">
+                        <div class="stat-item">
+                            <h4>10+</h4>
+                            <span>Years of Trust</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>4</h4>
+                            <span>Themes This Year</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>16–25</h4>
+                            <span>Youth Focus</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Programme -->
-    <section class="programme" id="programme">
-        <div class="section-container">
-            <span class="section-label reveal">Our Flagship Programme</span>
-            <h2 class="section-title reveal">Beyond the Margins<br><em>Empowering Young Voices</em></h2>
-            <div class="programme-intro reveal">
-                <p>A bold and dynamic year-long programme designed to empower <strong>16–25 year-olds</strong> from marginalised communities through storytelling, art, and self-expression. Rooted in Sparkbrook but open to youth from across marginalised backgrounds.</p>
-                <p>With workshops led by professional writers, theatre practitioners, and community leaders — in collaboration with both local and national freelancers and organisations — this programme offers a unique opportunity to connect, create, and be heard.</p>
-                <p><strong>Funded by Audible.</strong> Sessions are free, but spaces are limited — booking is essential.</p>
-            </div>
+<!-- Programme -->
+<section class="programme" id="programme">
+    <div class="section-container">
+        <span class="section-label reveal">Our Flagship Programme</span>
+        <h2 class="section-title reveal">Beyond the Margins<br><em>Empowering Young Voices</em></h2>
+        <div class="programme-intro reveal">
+            <p>A bold and dynamic year-long programme designed to empower <strong>16–25 year-olds</strong> from marginalised communities through storytelling, art, and self-expression. Rooted in Sparkbrook but open to youth from across marginalised backgrounds.</p>
+            <p>With workshops led by professional writers, theatre practitioners, and community leaders — in collaboration with both local and national freelancers and organisations — this programme offers a unique opportunity to connect, create, and be heard.</p>
+            <p><strong>Funded by Audible.</strong> Sessions are free, but spaces are limited — booking is essential.</p>
+        </div>
 
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">September – October 2025</span>
-                        <h3>1. Resisting Erasure: Resistance Art and Storytelling <span class="badge badge-gold">Active</span></h3>
-                        <p>Explore how creativity becomes a form of resistance. Three powerful sessions designed to help participants find their voice through visual and performative art.</p>
-                        <ul class="workshop-list">
-                            <li>Graffiti and Street Art</li>
-                            <li>Embroidery as Protest and Memory</li>
-                            <li>A unique creative session tailored to participants' interests</li>
-                        </ul>
-                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 1rem;">Limited spaces — free to attend. Dates and times to be confirmed.</p>
-                        <a href="#" class="timeline-cta">Book now on Eventbrite →</a>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">November – December 2025</span>
-                        <h3>2. Echoes of Home: The Art of Our Stories</h3>
-                        <p>This theme celebrates traditional and cultural art practices, helping participants reconnect with home and heritage through hands-on creative workshops.</p>
-                        <ul class="workshop-list">
-                            <li>Traditional Woodcraft</li>
-                            <li>Kashmiri Arts: Numda & Paisley Design</li>
-                            <li>A unique creative session tailored to participants' interests</li>
-                        </ul>
-                        <a href="#" class="timeline-cta">Book Now for Traditional Woodcraft →</a>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">January 2026</span>
-                        <h3>3. The Language of the Lens: Photography</h3>
-                        <p>Photography as language. Stories told through light, movement, and noticing. Photograph whatever matters to you — and take time to reflect, share, and shape your own visual voice.</p>
-                        <ul class="workshop-list">
-                            <li>Workshops across January</li>
-                            <li>Mentored by a skilled photographer</li>
-                            <li>Open to all levels</li>
-                        </ul>
-                        <a href="#" class="timeline-cta">Book Now →</a>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">March – April 2026</span>
-                        <h3>4. Between the Lines: Experiences and Narrative Building <span class="badge badge-emerald">Coming Soon</span></h3>
-                        <p>This theme will give participants the opportunity to visit sites connected to storytelling and lived experience, with sessions shaped by participant interests. Through shared trips and reflection, participants will develop narratives that respond to place, memory, and personal experience.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">May 2026</span>
-                        <h3>Growth & Community Showcase <span class="badge badge-emerald">Finale</span></h3>
-                        <p>The final month focuses on self-reflection, personal development, and preparing a community showcase to celebrate the powerful stories and work created throughout the programme.</p>
-                        <p style="margin-top: 1rem; color: var(--gold); font-weight: 600;">Spaces are limited and this is a rare, fully-funded opportunity to work with professionals and peers in a supportive, creative space.</p>
-                    </div>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">September – October 2025</span>
+                    <h3>1. Resisting Erasure: Resistance Art and Storytelling <span class="badge badge-gold">Active</span></h3>
+                    <p>Explore how creativity becomes a form of resistance. Three powerful sessions designed to help participants find their voice through visual and performative art.</p>
+                    <ul class="workshop-list">
+                        <li>Graffiti and Street Art</li>
+                        <li>Embroidery as Protest and Memory</li>
+                        <li>A unique creative session tailored to participants' interests</li>
+                    </ul>
+                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 1rem;">Limited spaces — free to attend. Dates and times to be confirmed.</p>
+                    <a href="#" class="timeline-cta">Book now on Eventbrite →</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Gallery - Instagram-style auto carousel -->
-    <section class="gallery" id="gallery">
-        <div class="section-container">
-            <div class="gallery-header reveal">
-                <span class="section-label">Gallery</span>
-                <h2 class="section-title">Moments from <em>Our Community</em></h2>
-                <p class="section-desc" style="margin: 0 auto;">A glimpse into the creativity, connection, and expression that happens in our workshops and community events.</p>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">November – December 2025</span>
+                    <h3>2. Echoes of Home: The Art of Our Stories</h3>
+                    <p>This theme celebrates traditional and cultural art practices, helping participants reconnect with home and heritage through hands-on creative workshops.</p>
+                    <ul class="workshop-list">
+                        <li>Traditional Woodcraft</li>
+                        <li>Kashmiri Arts: Numda & Paisley Design</li>
+                        <li>A unique creative session tailored to participants' interests</li>
+                    </ul>
+                    <a href="#" class="timeline-cta">Book Now for Traditional Woodcraft →</a>
+                </div>
             </div>
-        </div>
-        <div class="gallery-carousel-wrapper reveal">
-            <div class="gallery-carousel-track" id="galleryTrack">
-                <div class="gallery-item"><img src="https://images.pexels.com/photos/38446264/pexels-photo-38446264.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Creative workshop"><div class="gallery-item-overlay"><h3>Creative Workshops</h3><p>Diverse groups coming together through art.</p></div></div>
-                <div class="gallery-item"><img src="https://images.pexels.com/photos/36979662/pexels-photo-36979662.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Art workshop painting"><div class="gallery-item-overlay"><h3>Hands-On Art</h3><p>Exploring colour, form, and expression.</p></div></div>
-                <div class="gallery-item"><img src="https://images.pexels.com/photos/30697989/pexels-photo-30697989.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Photography workshop"><div class="gallery-item-overlay"><h3>Photography Sessions</h3><p>Finding your visual voice.</p></div></div>
-                <div class="gallery-item"><img src="https://images.pexels.com/photos/7693022/pexels-photo-7693022.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Youth collaboration"><div class="gallery-item-overlay"><h3>Youth Collaboration</h3><p>Young people creating together.</p></div></div>
-                <div class="gallery-item"><img src="https://images.pexels.com/photos/34022902/pexels-photo-34022902.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Community spaces"><div class="gallery-item-overlay"><h3>Community Spaces</h3><p>Creativity in shared spaces.</p></div></div>
-                <div class="gallery-item"><img src="https://images.pexels.com/photos/8107697/pexels-photo-8107697.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Expression and friendship"><div class="gallery-item-overlay"><h3>Expression &amp; Friendship</h3><p>Building confidence through art.</p></div></div>
-                <div class="gallery-item"><img src="https://images.pexels.com/photos/8382258/pexels-photo-8382258.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Art class painting"><div class="gallery-item-overlay"><h3>Creative Classes</h3><p>Painting on easels indoors.</p></div></div>
-                <div class="gallery-item"><img src="https://images.pexels.com/photos/8382387/pexels-photo-8382387.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Students painting"><div class="gallery-item-overlay"><h3>Young Artists</h3><p>Focus and creativity in class.</p></div></div>
-            </div>
-        </div>
-        <p class="gallery-hint" style="text-align:center; margin-top:2rem;">To use your own photos, add images to the <strong>public/</strong> folder and update the image links in the gallery section.</p>
-    </section>
 
-    <!-- Video Section -->
-    <section class="video-section" id="video">
-        <div class="section-container">
-            <span class="section-label reveal">Watch</span>
-            <h2 class="section-title reveal">Our Story in <em>Motion</em></h2>
-            <p class="section-desc reveal" style="margin: 0 auto 3rem;">Get a glimpse of the impact we are making together &mdash; the stories, the people, and the moments that define Inspire Hub.</p>
-            <div class="video-container reveal">
-                <img src="https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Video thumbnail" class="video-thumbnail" id="videoThumbnail">
-                <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video">
-                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </button>
-                <iframe class="video-iframe" id="videoIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">January 2026</span>
+                    <h3>3. The Language of the Lens: Photography</h3>
+                    <p>Photography as language. Stories told through light, movement, and noticing. Photograph whatever matters to you — and take time to reflect, share, and shape your own visual voice.</p>
+                    <ul class="workshop-list">
+                        <li>Workshops across January</li>
+                        <li>Mentored by a skilled photographer</li>
+                        <li>Open to all levels</li>
+                    </ul>
+                    <a href="#" class="timeline-cta">Book Now →</a>
+                </div>
             </div>
-        </div>
-    </section>
 
-
-    <!-- Team -->
-    <section class="team" id="team">
-        <div class="section-container">
-            <span class="section-label reveal">The People</span>
-            <h2 class="section-title reveal">Meet the <em>Team</em></h2>
-            <p class="section-desc reveal">A small but dedicated team of trained staff, working alongside community partners and professional freelancers to bring Inspire Hub's vision to life.</p>
-            <div class="team-grid">
-                <div class="team-card reveal"><div class="team-card-img"><span class="initials">MF</span></div><div class="team-card-body">
-                    <h4>Misbah Fayaz</h4><div class="role">Founder &amp; Director</div>
-                    <p>Leading Inspire Hub's strategic vision and community partnerships, building on over a decade of experience working with children and young people across Birmingham and Bristol. Misbah is a neuroscience graduate from the University of Bristol and a current Master's student in Mental Health (Youth/Interdisciplinary) at the University of Birmingham.</p>
-                    <a href="#" class="btn-profile" onclick="openProfile(event, 'Founder & Director', 'Leading Inspire Hub\'s strategic vision and community partnerships, building on over a decade of experience working with children and young people across Birmingham and Bristol. Misbah is a neuroscience graduate from the University of Bristol and a current Master\'s student in Mental Health (Youth/Interdisciplinary) at the University of Birmingham.', 'Over 10 years working with children and young people', 'Strategic planning, partnerships, fundraising, youth mental health', 'hello@inspirehubcommunity.org')">View Full Profile &rarr;</a>
-                </div></div>
-                <div class="team-card reveal"><div class="team-card-img"><span class="initials">IH</span></div><div class="team-card-body">
-                    <h4>Team Member</h4><div class="role">Programme Coordinator</div>
-                    <p>Overseeing the Beyond the Margins programme and ensuring every workshop delivers meaningful impact for participants.</p>
-                    <a href="#" class="btn-profile" onclick="openProfile(event, 'Programme Coordinator', 'Overseeing the Beyond the Margins programme and ensuring every workshop delivers meaningful impact for participants.', '5+ years in youth work', 'Programme design, workshop facilitation, youth engagement', 'hello@inspirehubcommunity.org')">View Full Profile &rarr;</a>
-                </div></div>
-                <div class="team-card reveal"><div class="team-card-img"><span class="initials">IH</span></div><div class="team-card-body">
-                    <h4>Team Member</h4><div class="role">Community Outreach</div>
-                    <p>Connecting with local residents, partners, and marginalised youth to ensure no voice goes unheard.</p>
-                    <a href="#" class="btn-profile" onclick="openProfile(event, 'Community Outreach', 'Connecting with local residents, partners, and marginalised youth to ensure no voice goes unheard.', 'Deep roots in Sparkbrook community', 'Community engagement, event organising, partnership building', 'hello@inspirehubcommunity.org')">View Full Profile &rarr;</a>
-                </div></div>
-                <div class="team-card reveal"><div class="team-card-img"><span class="initials">IH</span></div><div class="team-card-body">
-                    <h4>Team Member</h4><div class="role">Creative Lead</div>
-                    <p>Working with professional writers, theatre practitioners, and artists to design transformative creative experiences.</p>
-                    <a href="#" class="btn-profile" onclick="openProfile(event, 'Creative Lead', 'Working with professional writers, theatre practitioners, and artists to design transformative creative experiences.', 'Background in visual arts and theatre', 'Creative direction, workshop design, artist coordination', 'hello@inspirehubcommunity.org')">View Full Profile &rarr;</a>
-                </div></div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">March – April 2026</span>
+                    <h3>4. Between the Lines: Experiences and Narrative Building <span class="badge badge-emerald">Coming Soon</span></h3>
+                    <p>This theme will give participants the opportunity to visit sites connected to storytelling and lived experience, with sessions shaped by participant interests. Through shared trips and reflection, participants will develop narratives that respond to place, memory, and personal experience.</p>
+                </div>
             </div>
-            <p style="text-align: center; margin-top: 2.5rem; color: var(--text-muted); font-size: 0.95rem;" class="reveal"><em>Team profiles will be updated with photos and bios soon. Get in touch if you'd like to join us.</em></p>
-        </div>
-    </section>
 
-    <!-- Profile Modal -->
-    <div class="profile-modal-overlay" id="profileModal" onclick="closeProfile(event)">
-        <div class="profile-modal">
-            <div class="profile-modal-header">
-                <button class="profile-modal-close" onclick="closeProfileBtn()">&#10005;</button>
-                <span>IH</span>
-            </div>
-            <div class="profile-modal-body">
-                <h3 id="modalName">Team Member</h3>
-                <div class="role" id="modalRole">Role</div>
-                <p id="modalBio">Bio goes here.</p>
-                <div class="modal-details">
-                    <p><strong>Experience:</strong> <span id="modalExperience"></span></p>
-                    <p><strong>Skills:</strong> <span id="modalSkills"></span></p>
-                    <p><strong>Contact:</strong> <span id="modalContact"></span></p>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">May 2026</span>
+                    <h3>Growth & Community Showcase <span class="badge badge-emerald">Finale</span></h3>
+                    <p>The final month focuses on self-reflection, personal development, and preparing a community showcase to celebrate the powerful stories and work created throughout the programme.</p>
+                    <p style="margin-top: 1rem; color: var(--gold); font-weight: 600;">Spaces are limited and this is a rare, fully-funded opportunity to work with professionals and peers in a supportive, creative space.</p>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
+    <!-- Gallery - Instagram-style auto carousel -->
+<section class="gallery" id="gallery">
+    <div class="section-container">
+        <div class="gallery-header reveal">
+            <span class="section-label">Gallery</span>
+            <h2 class="section-title">Moments from <em>Our Community</em></h2>
+            <p class="section-desc" style="margin: 0 auto;">A glimpse into the creativity, connection, and expression that happens in our workshops and community events.</p>
+        </div>
+    </div>
+    <div class="gallery-carousel-wrapper reveal">
+        <div class="gallery-carousel-track" id="galleryTrack">
+            <div class="gallery-item"><img src="https://images.pexels.com/photos/38446264/pexels-photo-38446264.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Creative workshop"><div class="gallery-item-overlay"><h3>Creative Workshops</h3><p>Diverse groups coming together through art.</p></div></div>
+            <div class="gallery-item"><img src="https://images.pexels.com/photos/36979662/pexels-photo-36979662.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Art workshop painting"><div class="gallery-item-overlay"><h3>Hands-On Art</h3><p>Exploring colour, form, and expression.</p></div></div>
+            <div class="gallery-item"><img src="https://images.pexels.com/photos/30697989/pexels-photo-30697989.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Photography workshop"><div class="gallery-item-overlay"><h3>Photography Sessions</h3><p>Finding your visual voice.</p></div></div>
+            <div class="gallery-item"><img src="https://images.pexels.com/photos/7693022/pexels-photo-7693022.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Youth collaboration"><div class="gallery-item-overlay"><h3>Youth Collaboration</h3><p>Young people creating together.</p></div></div>
+            <div class="gallery-item"><img src="https://images.pexels.com/photos/34022902/pexels-photo-34022902.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Community spaces"><div class="gallery-item-overlay"><h3>Community Spaces</h3><p>Creativity in shared spaces.</p></div></div>
+            <div class="gallery-item"><img src="https://images.pexels.com/photos/8107697/pexels-photo-8107697.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Expression and friendship"><div class="gallery-item-overlay"><h3>Expression &amp; Friendship</h3><p>Building confidence through art.</p></div></div>
+            <div class="gallery-item"><img src="https://images.pexels.com/photos/8382258/pexels-photo-8382258.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Art class painting"><div class="gallery-item-overlay"><h3>Creative Classes</h3><p>Painting on easels indoors.</p></div></div>
+            <div class="gallery-item"><img src="https://images.pexels.com/photos/8382387/pexels-photo-8382387.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Students painting"><div class="gallery-item-overlay"><h3>Young Artists</h3><p>Focus and creativity in class.</p></div></div>
+        </div>
+    </div>
+    <p class="gallery-hint" style="text-align:center; margin-top:2rem;">To use your own photos, add images to the <strong>public/</strong> folder and update the image links in the gallery section.</p>
+</section>
+
+<!-- Video Section -->
+<section class="video-section" id="video">
+    <div class="section-container">
+        <span class="section-label reveal">Watch</span>
+        <h2 class="section-title reveal">Our Story in <em>Motion</em></h2>
+        <p class="section-desc reveal" style="margin: 0 auto 3rem;">Get a glimpse of the impact we are making together &mdash; the stories, the people, and the moments that define Inspire Hub.</p>
+        <div class="video-container reveal">
+            <img src="https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Video thumbnail" class="video-thumbnail" id="videoThumbnail">
+            <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <iframe class="video-iframe" id="videoIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Team -->
+<section class="team" id="team">
+    <div class="section-container">
+        <span class="section-label reveal">The People</span>
+        <h2 class="section-title reveal">Meet the <em>Team</em></h2>
+        <p class="section-desc reveal">A small but dedicated team of trained staff, working alongside community partners and professional freelancers to bring Inspire Hub's vision to life.</p>
+
+        <div class="team-grid">
+
+            <div class="team-card reveal">
+                <div class="team-card-img"><span class="initials">MF</span></div>
+                <div class="team-card-body">
+                    <h4>Misbah Fayaz</h4>
+                    <div class="role">Founder &amp; Director</div>
+                    <p>Leading Inspire Hub's strategic vision and community partnerships, building on over a decade of experience working with children and young people across Birmingham and Bristol. Misbah is a neuroscience graduate from the University of Bristol and a current Master's student in Mental Health (Youth/Interdisciplinary) at the University of Birmingham.</p>
+                    <a href="#" class="btn-profile" onclick="openProfile(event, 'Founder & Director', 'Leading Inspire Hub\'s strategic vision and community partnerships, building on over a decade of experience working with children and young people across Birmingham and Bristol. Misbah is a neuroscience graduate from the University of Bristol and a current Master\'s student in Mental Health (Youth/Interdisciplinary) at the University of Birmingham.', 'Over 10 years working with children and young people', 'Strategic planning, partnerships, fundraising, youth mental health', 'hello@inspirehubcommunity.org')">View Full Profile →</a>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-card-img"><span class="initials">IH</span></div>
+                <div class="team-card-body">
+                    <h4>Team Member</h4>
+                    <div class="role">Programme Coordinator</div>
+                    <p>Overseeing the Beyond the Margins programme and ensuring every workshop delivers meaningful impact for participants.</p>
+                    <a href="#" class="btn-profile" onclick="openProfile(event, 'Programme Coordinator', 'Overseeing the Beyond the Margins programme and ensuring every workshop delivers meaningful impact for participants.', '5+ years in youth work', 'Programme design, workshop facilitation, youth engagement', 'hello@inspirehubcommunity.org')">View Full Profile →</a>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-card-img"><span class="initials">IH</span></div>
+                <div class="team-card-body">
+                    <h4>Team Member</h4>
+                    <div class="role">Community Outreach</div>
+                    <p>Connecting with local residents, partners, and marginalised youth to ensure no voice goes unheard.</p>
+                    <a href="#" class="btn-profile" onclick="openProfile(event, 'Community Outreach', 'Connecting with local residents, partners, and marginalised youth to ensure no voice goes unheard.', 'Deep roots in Sparkbrook community', 'Community engagement, event organising, partnership building', 'hello@inspirehubcommunity.org')">View Full Profile →</a>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-card-img"><span class="initials">IH</span></div>
+                <div class="team-card-body">
+                    <h4>Team Member</h4>
+                    <div class="role">Creative Lead</div>
+                    <p>Working with professional writers, theatre practitioners, and artists to design transformative creative experiences.</p>
+                    <a href="#" class="btn-profile" onclick="openProfile(event, 'Creative Lead', 'Working with professional writers, theatre practitioners, and artists to design transformative creative experiences.', 'Background in visual arts and theatre', 'Creative direction, workshop design, artist coordination', 'hello@inspirehubcommunity.org')">View Full Profile →</a>
+                </div>
+            </div>
+
+        </div>
+
+        <p style="text-align: center; margin-top: 2.5rem; color: var(--text-muted); font-size: 0.95rem;" class="reveal">
+            <em>Team profiles will be updated with photos and bios soon. Get in touch if you'd like to join us.</em>
+        </p>
+    </div>
+</section>
+
+<!-- Profile Modal -->
+<div class="profile-modal-overlay" id="profileModal" onclick="closeProfile(event)">
+    <div class="profile-modal">
+        <div class="profile-modal-header">
+            <button class="profile-modal-close" onclick="closeProfileBtn()">&#10005;</button>
+            <span>IH</span>
+        </div>
+        <div class="profile-modal-body">
+            <h3 id="modalName">Team Member</h3>
+            <div class="role" id="modalRole">Role</div>
+            <p id="modalBio">Bio goes here.</p>
+            <div class="modal-details">
+                <p><strong>Experience:</strong> <span id="modalExperience"></span></p>
+                <p><strong>Skills:</strong> <span id="modalSkills"></span></p>
+                <p><strong>Contact:</strong> <span id="modalContact"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- CTA -->
-    <section class="cta-section" id="contact">
-        <h2 class="reveal">Ready to Be <em>Heard?</em></h2>
-        <p class="reveal">Spaces are limited. This is a rare, fully-funded opportunity to work with professionals and peers in a supportive, creative space.</p>
-        <div class="hero-cta reveal" style="justify-content: center;">
-            <a href="#" class="btn btn-primary">Book on Eventbrite →</a>
-            <a href="mailto:hello@inspirehubcommunity.org" class="btn btn-outline">Get in Touch</a>
-        </div>
-    </section>
+<section class="cta-section" id="contact">
+    <h2 class="reveal">Ready to Be <em>Heard?</em></h2>
+    <p class="reveal">Spaces are limited. This is a rare, fully-funded opportunity to work with professionals and peers in a supportive, creative space.</p>
+    <div class="hero-cta reveal" style="justify-content: center;">
+        <a href="#" class="btn btn-primary">Book on Eventbrite →</a>
+        <a href="mailto:hello@inspirehubcommunity.org" class="btn btn-outline">Get in Touch</a>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <img src="data:image/jpeg;base64,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" alt="Inspire Hub">
-                <p>Reimagining spaces, empowering voices, and building something meaningful, inclusive, and lasting — together.</p>
-            </div>
-            <div class="footer-col">
-                <h5>Explore</h5>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#programme">Programmes</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#">News</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Programmes</h5>
-                <ul>
-                    <li><a href="#">Beyond the Margins</a></li>
-                    <li><a href="#">Workshops</a></li>
-                    <li><a href="#">Community Events</a></li>
-                    <li><a href="#">Partnerships</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Connect</h5>
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Volunteer</a></li>
-                    <li><a href="#">Donate</a></li>
-                    <li><a href="#">Eventbrite</a></li>
-                </ul>
-            </div>
+<!-- Footer -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="Inspire Hub">
+            <p>Reimagining spaces, empowering voices, and building something meaningful, inclusive, and lasting — together.</p>
         </div>
-        <div class="footer-bottom">
-            <span>© 2025 Inspire Hub Community. All rights reserved.</span>
-            <div class="footer-social">
-                <a href="#" aria-label="Instagram">IG</a>
-                <a href="#" aria-label="Twitter">X</a>
-                <a href="#" aria-label="Facebook">FB</a>
-                <a href="#" aria-label="LinkedIn">LI</a>
-            </div>
-        </div>
-    </footer>
 
-    <script>
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+        <div class="footer-col">
+            <h5>Explore</h5>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#programme">Programmes</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h5>Programmes</h5>
+            <ul>
+                <li><a href="#">Beyond the Margins</a></li>
+                <li><a href="#">Workshops</a></li>
+                <li><a href="#">Community Events</a></li>
+                <li><a href="#">Partnerships</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h5>Connect</h5>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Volunteer</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Eventbrite</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Inspire Hub Community. All rights reserved.</span>
+        <div class="footer-social">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile menu
+    function toggleMenu() {
+        document.getElementById('mobileNav').classList.toggle('active');
+    }
+
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.reveal, .timeline-item');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
             }
         });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        // Mobile menu
-        function toggleMenu() {
-            document.getElementById('mobileNav').classList.toggle('active');
-        }
+    revealElements.forEach(el => revealObserver.observe(el));
 
-        // Scroll reveal
-        const revealElements = document.querySelectorAll('.reveal, .timeline-item');
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-        revealElements.forEach(el => revealObserver.observe(el));
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
-    </script>
+    });
+
+    // Video play button
+    const videoPlayBtn = document.getElementById('videoPlayBtn');
+    const videoThumbnail = document.getElementById('videoThumbnail');
+    const videoIframe = document.getElementById('videoIframe');
+
+    videoPlayBtn.addEventListener('click', () => {
+        videoThumbnail.style.display = 'none';
+        videoPlayBtn.style.display = 'none';
+        videoIframe.src = "https://www.youtube.com/embed/VIDEO_ID?autoplay=1";
+        videoIframe.style.display = 'block';
+    });
+
+    // Profile modal
+    function openProfile(event, role, bio, experience, skills, contact) {
+        event.preventDefault();
+        document.getElementById('modalRole').innerText = role;
+        document.getElementById('modalBio').innerText = bio;
+        document.getElementById('modalExperience').innerText = experience;
+        document.getElementById('modalSkills').innerText = skills;
+        document.getElementById('modalContact').innerText = contact;
+        document.getElementById('profileModal').classList.add('active');
+    }
+
+    function closeProfile(event) {
+        if (event.target.id === 'profileModal') {
+            document.getElementById('profileModal').classList.remove('active');
+        }
+    }
+
+    function closeProfileBtn() {
+        document.getElementById('profileModal').classList.remove('active');
+    }
+</script>
+
 </body>
 </html>
