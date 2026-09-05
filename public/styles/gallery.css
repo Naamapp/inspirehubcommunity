@@ -127,3 +127,18 @@
     border: none;
     display: none;
 }
+
+/* ---------------------------------------------
+   FORCE VIDEO SECTION TEXT TO WHITE
+--------------------------------------------- */
+
+.video-section .section-title,
+.video-section .section-label,
+.video-section .section-desc {
+    color: white !important;
+}
+
+/* Optional: keep the gold accent on <em> */
+.video-section .section-title em {
+    color: var(--gold);
+}
