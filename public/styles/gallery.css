@@ -50,3 +50,62 @@
 .gallery-carousel-wrapper:hover .gallery-carousel-track {
     animation-play-state: paused;
 }
+
+/* ------------------------------
+   VIDEO SECTION
+------------------------------ */
+
+.video-section {
+    padding: 5rem 2rem;
+    background: var(--cream);
+}
+
+.video-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video-thumbnail {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+
+.video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--emerald);
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(5,150,105,0.4);
+    transition: all 0.3s ease;
+}
+
+.video-play-btn svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
+
+.video-play-btn:hover {
+    background: var(--emerald-dark);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.video-iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 20px;
+    display: none;
+}
